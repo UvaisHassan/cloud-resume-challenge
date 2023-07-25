@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Uvais Hassan</title>
+    </head>
+    <body>
+        <header>
+            Uvais Hassan
+            <div id="counter-container"></div>
+        </header>
+        <section>
+            <h3>Projects</h3>
+            <dl>
+                <dt>Real-time Communication Framework for the Deaf</dt>
+                <dd>
+                    Final year project for BTech. Developed a website to enable live communication between hearing users and deaf users. Utilises sign language and natural language translations.
+                </dd>
+            </dl>
+        </section>
+        <section>
+            <h3>Languages</h3>
+            <ul>
+                <li>English</li>
+                <li>Malayalam</li>
+                <li>Japanese (learning)</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Interests and hobbies</h3>
+            <ul>
+                <li>Mathematics</li>
+                <li>Reading</li>
+            </ul>
+        </section>
+        <footer>
+
+        </footer>
+        <script>
+            var counter_container = document.querySelector('#counter-container');
+            
+            async function updateCounter() {
+                let response = await fetch('https://9b5lh4vva4.execute-api.ap-south-1.amazonaws.com/getViews');
+                let data = await response.json();
+
+                counter_container.innerHTML = 'Visitor count: ' + data;
+            }
+
+            updateCounter();
+        </script>
+    </body>
+</html>
