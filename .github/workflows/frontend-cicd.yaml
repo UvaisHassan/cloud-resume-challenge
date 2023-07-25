@@ -20,5 +20,5 @@ jobs:
           aws-region: ap-south-1
 
       - name: Sync website files to S3 bucket
-        run: aws s3 sync . s3://crc-uvais-website --delete
+        run: aws s3 sync ./website s3://crc-uvais-website --delete
 
