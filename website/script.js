@@ -6,7 +6,7 @@ async function updateCounter() {
   );
   let data = await response.json();
 
-  counter_container.innerHTML = "Visitor count: " + data;
+  counter_container.innerHTML = data;
 }
 
 updateCounter();
